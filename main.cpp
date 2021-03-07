@@ -13,13 +13,22 @@ struct Dict
     std::string specials[23] = {"!", "£", "$", "%", "^", "&", "*", "(", ")", "@", ";", ":", "<", ">", ",", ".", "#", "{", "}", "[", "]"};
 };
 
+// struct Settings
+// {
+//     int _passwordLength = 0;
+//     bool _includeSymbols = false;
+//     bool _includeNumbers = false;
+//     bool _includeLowercase = false;
+//     bool _includeUppercase = false;
+// };
+
 struct Settings
 {
-    int _passwordLength = 15;
-    bool _includeSymbols = true;
-    bool _includeNumbers = true;
-    bool _includeLowercase = true;
-    bool _includeUppercase = true;
+    int _passwordLength{};
+    bool _includeSymbols{};
+    bool _includeNumbers{};
+    bool _includeLowercase{};
+    bool _includeUppercase{};
 };
 
 int get_random(int min, int max)
@@ -69,8 +78,33 @@ std::string generate_password(Settings s)
 int main()
 {
     srand(static_cast<unsigned int>(time(0)));
-    Settings s{};
+
+    int length;
+    char lowercase;
+    char uppercase;
+    char numbers;
+    char symbols;
+
+    std::cout << "How long would you like the password to be: " << std::endl;
+    std::cin >> length;
+    std::cout << "Include lower-case characters? (y/n): " << std::endl;
+    std::cin >> lowercase;
+    std::cout << "Include upper-case characters? (y/n): " << std::endl;
+    std::cin >> uppercase;
+    std::cout << "Include numbers? (y/n): " << std::endl;
+    std::cin >> numbers;
+    std::cout << "Include special characters? (y/n): " << std::endl;
+    std::cin >> symbols;
+
+    Settings s{
+        length,
+        toupper(symbols) == 'Y' ? 1 : 0,
+        toupper(numbers) == 'Y' ? 1 : 0,
+        toupper(lowercase) == 'Y' ? 1 : 0,
+        toupper(uppercase) == 'Y' ? 1 : 0};
 
     std::string password = generate_password(s);
+
+    std::cout << password << std::endl;
     return 0;
 }
