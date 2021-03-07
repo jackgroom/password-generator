@@ -24,6 +24,6 @@ simply input an int for the password length, and either 'y' or 'n' for the remai
 to compile the code, run in local terminal:
 
 ```
-$ g++ -p <desired_file_name> main.cpp
+$ g++ -o <desired_file_name> main.cpp
 $ ./<desired_file_name>
 ```
