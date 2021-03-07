@@ -4,9 +4,9 @@ fun little project to test out my c++ and general programming skills
 
 ## table of contents
 
-[general info](#general-info)
-[usage](#usage)
-[compiling](#compiling-the-code)
+- [general info](#general-info)
+- [usage](#usage)
+- [compiling](#compiling-the-code)
 
 ## general info
 
