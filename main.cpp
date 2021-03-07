@@ -15,21 +15,62 @@ struct Dict
 
 struct Settings
 {
-    int _passwordLength = 0;
-    bool _includeSymbols = false;
-    bool _includeNumbers = false;
-    bool _includeLowercase = false;
-    bool _includeUppercase = false;
+    int _passwordLength = 15;
+    bool _includeSymbols = true;
+    bool _includeNumbers = true;
+    bool _includeLowercase = true;
+    bool _includeUppercase = true;
 };
 
 int get_random(int min, int max)
 {
-    srand(static_cast<unsigned int>(time(0)));
     return rand() % (max - min + 1) + min;
+}
+
+std::string generate_password(Settings s)
+{
+    Dict d{};
+    std::string result = "";
+
+    int choices[4] = {0, 0, 0, 0};
+
+    // this is really ugly lol oh well
+    choices[0] = (s._includeLowercase ? 1 : 0);
+    choices[1] = (s._includeUppercase ? 2 : 0);
+    choices[2] = (s._includeNumbers ? 3 : 0);
+    choices[3] = (s._includeSymbols ? 4 : 0);
+
+    for (int i = 0; i < s._passwordLength; i++)
+    {
+        int choice = 0;
+        while (choice == 0)
+        {
+            choice = choices[get_random(0, 3)];
+        }
+        switch (choice)
+        {
+        case 1:
+            result += d.letters[get_random(0, 26)];
+            break;
+        case 2:
+            result += toupper(d.letters[get_random(0, 25)]);
+            break;
+        case 3:
+            result += std::to_string(d.numbers[get_random(0, 9)]);
+            break;
+        case 4:
+            result += d.specials[get_random(0, 22)];
+            break;
+        }
+    }
+    return result;
 }
 
 int main()
 {
-    std::cout << "Hello world" << std::endl;
+    srand(static_cast<unsigned int>(time(0)));
+    Settings s{};
+
+    std::string password = generate_password(s);
     return 0;
 }
