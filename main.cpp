@@ -52,8 +52,24 @@ std::string generate_password(Settings s)
     for (int i = 0; i < s._passwordLength; i++)
     {
         int choice = 0;
+
+        bool found = false;
+        for (int i = 0; i < 4; i++)
+        {
+            if (choices[i] != 0)
+            {
+                found = true;
+            }
+        }
+
+        if (found == false)
+        {
+            return "fuck off u cunt";
+        }
+
         while (choice == 0)
         {
+
             choice = choices[get_random(0, 3)];
         }
         switch (choice)
