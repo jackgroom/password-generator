@@ -1,10 +1,6 @@
 #include <iostream>
-#include <windows.h>
-#include <stdio.h>
-#include <tchar.h>
-#include <ctime>
-#include <cstdlib>
 #include <string>
+#include <ctime>
 
 struct Dict
 {
@@ -12,15 +8,6 @@ struct Dict
     int numbers[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
     std::string specials[23] = {"!", "£", "$", "%", "^", "&", "*", "(", ")", "@", ";", ":", "<", ">", ",", ".", "#", "{", "}", "[", "]"};
 };
-
-// struct Settings
-// {
-//     int _passwordLength = 0;
-//     bool _includeSymbols = false;
-//     bool _includeNumbers = false;
-//     bool _includeLowercase = false;
-//     bool _includeUppercase = false;
-// };
 
 struct Settings
 {
@@ -69,7 +56,6 @@ std::string generate_password(Settings s)
 
         while (choice == 0)
         {
-
             choice = choices[get_random(0, 3)];
         }
         switch (choice)
