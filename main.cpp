@@ -51,7 +51,7 @@ std::string generate_password(Settings s)
 
         if (found == false)
         {
-            return "fuck off u cunt";
+            return "very funny";
         }
 
         while (choice == 0)
