@@ -8,6 +8,6 @@ This program should **not** be used as a replacement for actual password generat
 
 ### With gcc
 
->$ g++ -o <name-of-file> main.cpp
+>$ g++ -o name-of-file main.cpp
 >
 >$ ./file_name
