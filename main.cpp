@@ -150,7 +150,7 @@ int main(int argc, const char * argv[]) {
     std::cout << generatePassword(&settings) << std::endl;
     
     std::cout << "Press any key to exit...";
-    getchar();
+    std::getchar();
         
     return 0;
 }
