@@ -8,5 +8,5 @@ This program should **not** be used as a replacement for actual password generat
 
 ### With GCC
 
-1. > $ g++ -o <name-of-file> main.cpp
-2. > $ ./<name-of-file>
+> g++ -o <name-of-file> main.cpp
+> ./<name-of-file>
