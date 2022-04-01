@@ -6,7 +6,7 @@ This program should **not** be used as a replacement for actual password generat
 
 ## How to compile
 
-### With GCC
+### With gcc
 
 >$ g++ -o <name-of-file> main.cpp
 >
