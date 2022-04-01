@@ -14,7 +14,7 @@ This program should **not** be used as a replacement for actual password generat
 >$ ./file_name
 
 ### MacOS
-####With g++
+#### With g++
 
 >$ g++ -std=c++11 -o name-of-file main.cpp
 >
