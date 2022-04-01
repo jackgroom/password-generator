@@ -9,13 +9,13 @@ This program should **not** be used as a replacement for actual password generat
 ### Windows
 #### With g++
 
->$ g++ -o name-of-file main.cpp
+>$ g++ -o desired_name main.cpp
 >
->$ ./file_name
+>$ ./desired_name
 
 ### MacOS
 #### With g++
 
->$ g++ -std=c++11 -o name-of-file main.cpp
+>$ g++ -std=c++11 -o desired_name main.cpp
 >
->$ ./file_name
+>$ ./desired_name
