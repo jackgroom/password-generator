@@ -1,4 +1,4 @@
-### Password Generator
+# Password Generator
 
 ## NOTE
 This was made as a fun project to practice / showcase my C++ programming skills.
