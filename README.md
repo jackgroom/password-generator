@@ -9,4 +9,5 @@ This program should **not** be used as a replacement for actual password generat
 ### With GCC
 
 > g++ -o <name-of-file> main.cpp
+>
 > ./<name-of-file>
