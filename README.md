@@ -7,8 +7,15 @@ This program should **not** be used as a replacement for actual password generat
 ## How to compile
 
 ### Windows
-#### With gcc
+#### With g++
 
 >$ g++ -o name-of-file main.cpp
+>
+>$ ./file_name
+
+### MacOS
+####With g++
+
+>$ g++ -std=c++11 -o name-of-file main.cpp
 >
 >$ ./file_name
