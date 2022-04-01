@@ -7,11 +7,15 @@
 
 #include <iostream>
 #include <sstream>
-#include <stdio.h>
-#include <ctype.h>
+#include <limits>
 #include <string>
 #include <map>
 #include <vector>
+#include <algorithm>
+
+#include <stdio.h>
+#include <ctype.h>
+#include <time.h>
 
 // enums for the different character types (for switch statement etc)
 enum CharacterType {
@@ -150,7 +154,8 @@ int main(int argc, const char * argv[]) {
     std::cout << generatePassword(&settings) << std::endl;
     
     std::cout << "Press any key to exit...";
-    std::getchar();
-        
+    std::cin.ignore();
+    std::cin.get();
+
     return 0;
 }
